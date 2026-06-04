@@ -11,3 +11,10 @@ RUN wget -q -O /runpod-volume/models/loras/art_noir.safetensors \
     && cp /runpod-volume/models/loras/art_noir.safetensors \
           /comfyui/models/loras/art_noir.safetensors \
     && echo "LoRA: $(ls -lh /runpod-volume/models/loras/art_noir.safetensors)"
+
+# SDXL Base Checkpoint
+RUN wget -q -O /runpod-volume/models/checkpoints/sd_xl_base_1.0.safetensors \
+    "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors" \
+    && cp /runpod-volume/models/checkpoints/sd_xl_base_1.0.safetensors \
+          /comfyui/models/checkpoints/sd_xl_base_1.0.safetensors \
+    && echo "Checkpoint: $(ls -lh /runpod-volume/models/checkpoints/sd_xl_base_1.0.safetensors)"
